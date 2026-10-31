@@ -12,6 +12,7 @@ export default async function migrations(request, response) {
     verbose: true,
     migrationsTable: "pgmigrations",
   };
+
   switch (request.method) {
     case "GET":
       const pendingMigrations = await pgMigrationRunner(
